@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/baseFormFragment">
+
+    <fragment
+        android:id="@+id/baseFormFragment"
+        android:name="com.example.fizzbuzz.presentation.ui.FormFragment"
+        android:label="base_form_fragment"
+        tools:layout="@layout/form_fragment">
+        <action
+            android:id="@+id/action_baseFormFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.fizzbuzz.presentation.ui.ResultFragment"
+        android:label="result_fragment"
+        tools:layout="@layout/result_fragment"/>
+
+</navigation>

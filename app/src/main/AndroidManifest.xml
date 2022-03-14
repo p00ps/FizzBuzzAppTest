@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.fizzbuzz">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.fizzbuzz"
+    tools:ignore="LockedOrientationActivity">
 
     <application
         android:name=".MainApplication"
@@ -12,7 +14,8 @@
         android:theme="@style/Theme.FizzBuzz">
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
