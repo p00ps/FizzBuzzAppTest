@@ -1,4 +1,4 @@
-package com.example.fizzbuzz.ui.main
+package com.example.fizzbuzz.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 
