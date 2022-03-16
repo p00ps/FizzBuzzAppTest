@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">FizzBuzz</string>
+
+    <string name="validate">Validate</string>
+
+    <string name="hint_number_one">multiple 1 to replace</string>
+    <string name="hint_number_two">multiple 2 to replace</string>
+    <string name="hint_string_one">multiple 1 replace by str 1</string>
+    <string name="hint_string_two">multiple 2 replace by str 2</string>
+    <string name="hint_limit">limit</string>
+
+    <string name="input_form_description">** Put rules here **\nBlah Blah Blah</string>
+    <string name="input_form_error">Please read the instructions carefully</string>
 </resources>

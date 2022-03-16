@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/baseFormFragment"
-        android:name="com.example.fizzbuzz.presentation.ui.FormFragment"
+        android:name="com.example.fizzbuzz.presentation.ui.form.FormFragment"
         android:label="base_form_fragment"
         tools:layout="@layout/form_fragment">
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.example.fizzbuzz.presentation.ui.ResultFragment"
+        android:name="com.example.fizzbuzz.presentation.ui.result.ResultFragment"
         android:label="result_fragment"
         tools:layout="@layout/result_fragment"/>
 
