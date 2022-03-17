@@ -1,13 +1,16 @@
 package com.example.fizzbuzz.core
 
 import android.util.Log
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.flow.SharingStarted.Companion.WhileSubscribed
 import kotlinx.coroutines.launch
 
-abstract class BaseMVIViewModel<S : MVI.State, I : MVI.Intent>(
-    private val firstModel: S
+public abstract class BaseMVIViewModel<S : MVI.State, I : MVI.Intent>(
+    private val firstModel: S,
 ) : androidx.lifecycle.ViewModel(),
     MVI.ViewModel<S, I> {
 
