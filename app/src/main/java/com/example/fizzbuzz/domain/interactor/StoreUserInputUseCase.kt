@@ -18,4 +18,3 @@ class StoreUserInputUseCase @Inject constructor(
         val userInput: UserInput
     )
 }
-

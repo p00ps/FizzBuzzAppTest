@@ -1,0 +1,18 @@
+package com.example.fizzbuzz
+
+import com.example.fizzbuzz.data.model.UserInputData
+
+val userInputData = UserInputData(
+    3, 5, "Fizz", "Buzz", 1000000
+)
+
+val userBaseRangeResult = listOf(
+    "1 -> 1", "2 -> 2", "3 -> Fizz", "4 -> 4", "5 -> Buzz",
+    "6 -> Fizz", "7 -> 7", "8 -> 8", "9 -> Fizz", "10 -> Buzz",
+    "11 -> 11", "12 -> Fizz", "13 -> 13", "14 -> 14", "15 -> FizzBuzz"
+)
+
+val smallRangeResult = listOf(
+    "1 -> 1", "2 -> 2", "3 -> Fizz", "4 -> 4", "5 -> Buzz",
+    "6 -> Fizz", "7 -> 7", "8 -> 8", "9 -> Fizz", "10 -> Buzz"
+)

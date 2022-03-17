@@ -1,10 +1,10 @@
 package com.example.fizzbuzz.data.datasource
 
-import com.example.fizzbuzz.data.model.UserInputData
+import com.example.fizzbuzz.userInputData
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.test.runBlockingTest
+import kotlinx.coroutines.test.runTest
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
@@ -14,13 +14,10 @@ class FizzBuzzDataSourceTest {
 
     private val fizzBuzzDataSource = mockk<FizzBuzzDataSource>()
 
-    private val intRange = (0..15)
-    private val userInputData = UserInputData(
-        3, 5, "Fizz", "Buzz", 1000000
-    )
+    private val intRange = (1..15)
 
     @Before
-    public fun setup() {
+    fun setup() {
         coEvery {
             fizzBuzzDataSource.transformRange(intRange, userInputData)
         } returns listOf(
@@ -38,13 +35,12 @@ class FizzBuzzDataSourceTest {
             "12 -> Fizz",
             "13 -> 13",
             "14 -> 14",
-            "15 -> FizzBuzz",
-            "16 -> 16"
+            "15 -> FizzBuzz"
         )
     }
 
     @Test
-    public fun `check if multiple of 3 return Fizz`(): Unit = runBlockingTest {
+    fun `check if multiple of 3 return Fizz`(): Unit = runTest {
         val result = fizzBuzzDataSource.transformRange(intRange, userInputData)
 
         Assert.assertNotNull(result)
@@ -52,7 +48,7 @@ class FizzBuzzDataSourceTest {
     }
 
     @Test
-    public fun `check if multiple of 5 return Buzz`(): Unit = runBlockingTest {
+    fun `check if multiple of 5 return Buzz`(): Unit = runTest {
         val result = fizzBuzzDataSource.transformRange(intRange, userInputData)
 
         Assert.assertNotNull(result)
@@ -60,7 +56,7 @@ class FizzBuzzDataSourceTest {
     }
 
     @Test
-    public fun `check if multiple of 3 and 5 return FizzBuzz`(): Unit = runBlockingTest {
+    fun `check if multiple of 3 and 5 return FizzBuzz`(): Unit = runTest {
         val result = fizzBuzzDataSource.transformRange(intRange, userInputData)
 
         Assert.assertNotNull(result)
